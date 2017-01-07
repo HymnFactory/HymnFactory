@@ -1,0 +1,36 @@
+{
+    "name": "hymnfactory",
+    "version": "1.0.0",
+    "description": "Hymn database application",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "init:server": "cd server && yarn install",
+        "init:client": "cd client && yarn install",
+        "init": "concurrently \"yarn run init:server\" \"yarn run init:client\"",
+        "start:server": "cd server && sails lift",
+        "start:client": "cd client && ionic serve",
+        "start": "yarn run init && concurrently \"yarn run start:server\" \"yarn run start:client\"  "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://genu@github.com/HymnFactory/HymnFactory.git"
+    },
+    "keywords": [
+        "hymn",
+        "songs",
+        "worship"
+    ],
+    "author": "Eugen Istoc",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/HymnFactory/HymnFactory/issues"
+    },
+    "homepage": "https://github.com/HymnFactory/HymnFactory#readme",
+    "dependencies": {
+        "concurrently": "^3.1.0",
+        "cordova": "^6.4.0",
+        "ionic": "^2.1.18",
+        "sails": "^0.12.11"
+    }
+}
