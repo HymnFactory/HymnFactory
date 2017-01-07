@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "init:server": "cd server && yarn install",
         "init:client": "cd client && yarn install",
-        "init": "concurrently \"yarn run init:server\" \"yarn run init:client\"",
+        "init": "yarn install && concurrently \"yarn run init:server\" \"yarn run init:client\"",
         "start:server": "cd server && sails lift",
         "start:client": "cd client && ionic serve",
         "start": "yarn run init && concurrently \"yarn run start:server\" \"yarn run start:client\"  "
