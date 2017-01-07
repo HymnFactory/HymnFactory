@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/HymnFactory/hymnfactory-client.git
+[submodule "server"]
+	path = server
+	url = https://genu@github.com/HymnFactory/hymnfactory-server.git
